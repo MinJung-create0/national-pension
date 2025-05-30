@@ -3834,6 +3834,10 @@ body.menu-open .page-wrapper {
     align-items: stretch;
 }
 
+#sub14 .flex-2 .img-container-mob {
+    display: none;
+}
+
 
 /* AI Platform Section */
 #sub14 .full-bleed {
@@ -3899,7 +3903,7 @@ body.menu-open .page-wrapper {
 #sub14 .section-title {
     display: flex;
     align-items: center;
-    font-size: 1.75rem;
+    font-size: 19px;
     color: #333;
 }
 
@@ -3957,7 +3961,7 @@ body.menu-open .page-wrapper {
     align-items: start;
     /* 세로 정렬은 시작점에 고정 */
     padding: 0 0 16px;
-    border-bottom: 1px dashed #aaa;
+    border-bottom: 1px dashed #222;
 }
 
 /* 2번째부터 마지막까지 */
@@ -3965,9 +3969,6 @@ body.menu-open .page-wrapper {
     padding: 16px 0;
 }
 
-#sub14 .platform:last-child {
-    border-bottom: none;
-}
 
 /* ▶ 여기에 로고 사이즈 고정 70×70 추가 */
 #sub14 .logo {
@@ -3993,9 +3994,12 @@ body.menu-open .page-wrapper {
 
 #sub14 .desc {
     margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 17px;
     color: #555;
+}
+
+#sub14 .desc-mob {
+    display: none;
 }
 
 /* “요즘 뜨는 AI 활용법” */
@@ -4051,7 +4055,7 @@ body.menu-open .page-wrapper {
 
 #sub14 .activity-image {
     overflow: hidden;
-    width: 30%;
+    width: 33%;
 }
 
 #sub14 .activity-image img {
@@ -4125,20 +4129,116 @@ body.menu-open .page-wrapper {
     display: none;
 }
 
+#sub14 .section-icon-mob {
+    display: none;
+}
+
 /* 모바일 레이아웃 전환 시 */
 @media (max-width: 768px) {
 
+    #sub14 .desc-mob {
+        display: block;
+    }
+
+    #sub14 .desc {
+        font-size: 16px;
+    }
+
+    #sub14 .section-icon-mob {
+        display: block;
+    }
+
+    /* full-bleed 영역에만 좌우 20px 패딩 적용 */
+    #sub14 .full-bleed {
+        padding: 0 20px;
+    }
+
     /* PC 이미지는 숨기고 */
-    .full-bleed .img-pc {
+    #sub14 .full-bleed .img-pc {
         display: none;
     }
 
     /* 모바일 이미지만 보이게 */
-    .full-bleed .img-mob {
+    #sub14 .full-bleed .img-mob {
         display: block;
     }
-}
 
+    #sub14 .full-bleed .container {
+        margin: 56px 0;
+        padding: 50px 0;
+    }
+
+    #sub14 .full-bleed .container-2 {
+        margin: 56px auto 0;
+        padding: 50px 0 0;
+    }
+
+    #sub14 .subtitle {
+        margin: 16px 0 24px !important;
+    }
+
+    #sub14 .flex-2 {
+        flex-direction: column-reverse;
+        gap: 24px;
+        /* 필요에 따라 간격 줄임 */
+    }
+
+    #sub14 .flex-2 .img-container {
+        display: none;
+    }
+
+    #sub14 .flex-2 .summary,
+    #sub14 .flex-2 .img-container-mob {
+        width: 100%;
+        display: block;
+        /* 한 줄 차지 */
+        margin: 0;
+        /* 혹시 남아 있는 여백 제거 */
+    }
+
+    #sub14 .flex-wraper {
+        margin-bottom: 56px;
+    }
+
+    #sub14 .activity-content {
+        display: block;
+    }
+
+    #sub14 .activity-icon {
+        width: 31px;
+        height: 31px;
+        margin-right: 12px;
+    }
+
+    #sub14 .activity-icon-2 {
+        height: 22px;
+    }
+
+    #sub14 .activity-image {
+        width: 100%;
+    }
+
+    #sub14 .activity-text {
+        margin-top: 24px;
+    }
+
+    #sub14 .container-2 .section-title {
+        display: flex;
+        align-items: flex-start;
+        /* 아이콘과 텍스트를 상단 기준으로 정렬 */
+        gap: 10px;
+    }
+
+    /* 아이콘을 텍스트 위쪽으로 살짝 올리는 추가 마진 */
+    #sub14 .container-2 .section-icon {
+        align-self: flex-start;
+        /* 위치 보정 */
+        margin-top: 2px;
+        margin-right: 0;
+        /* 필요에 따라 조절 */
+    }
+
+}
 
 
 
